@@ -8,8 +8,6 @@ const connectionStr = `${process.env.CONNECTION_STR}`
   .replace('<account>', process.env.DB_ACCOUNT)
   .replace('<password>', process.env.DB_PASSWORD);
 
-console.log(connectionStr)
-
 const mongoose = require('mongoose');
 mongoose.connect(connectionStr)
     .then(() => {console.log('DB connected')})

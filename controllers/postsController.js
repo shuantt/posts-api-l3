@@ -16,8 +16,6 @@ const postsController = {
     createPost: async (req, res) => {
         try {   
             const {content,image,name,likes} = req.body;
-            console.log(content, image,name,likes);
-
             if (content === undefined || name === undefined) {
                 responseHandler.sendError(res, 400, 'content 和 name 為必填');
                 return;
